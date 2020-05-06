@@ -36,11 +36,7 @@ kind: Service
 metadata:
   labels:
     name: springboot
-    name: petclinic
-    name: tomcat
   name: springboot
-  name: petclinic
-  name: tomcat
 spec:
   type: NodePort
   ports:
@@ -48,8 +44,6 @@ spec:
       targetPort: 8080
   selector:
     name: springboot
-    name: petclinic
-    name: jenkins
           
 ---
 # Mongo host path rc
