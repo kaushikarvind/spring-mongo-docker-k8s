@@ -18,7 +18,7 @@ spec:
         ports:
         - name: springboot
           containerPort: 8080
-      - image: kaushikarvind/petclinic
+      - image: kaushikarvind/petclinic:8
         name: petclinic
         ports:
         - name: petclinic
