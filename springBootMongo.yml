@@ -36,44 +36,6 @@ spec:
     name: springboot
           
 ---
-# PetClinic Replication Controller
-apiVersion: v1
-kind: ReplicationController
-metadata:
-  labels:
-    name: petclinic
-  name: petclinic-controller
-spec:
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        name: petclinic
-    spec:
-      containers:
-      - image: kaushikarvind/petclinic:8
-        name: petclinic
-        ports:
-        - name: petclinic
-          containerPort: 8080
-
----
-# PetClinic Node Port Service
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    name: petclinic
-  name: petclinic
-spec:
-  type: NodePort
-  ports:
-    - port: 8080
-      targetPort: 8080
-  selector:
-    name: petclinic
-    
----
 # Mongo host path rc
 apiVersion: v1
 kind: ReplicationController
