@@ -19,12 +19,12 @@ spec:
         - name: springboot
           containerPort: 8080
       - image: kaushikarvind/petclinic:8
-        name: springboot
+        name: petclinic
         ports:
         - name: petclinic
           containerPort: 8080
       - image: kaushikarvind/jenkins-docker
-        name: springboot
+        name: jenkins
         ports:
         - name: jenkins
           containerPort: 8080   
@@ -36,7 +36,11 @@ kind: Service
 metadata:
   labels:
     name: springboot
+    name: petclinic
+    name: jenkins
   name: springboot
+  name: petclinic
+  name: jenkins
 spec:
   type: NodePort
   ports:
@@ -44,6 +48,8 @@ spec:
       targetPort: 8080
   selector:
     name: springboot
+    name: petclinic
+    name: jenkins
           
 ---
 # Mongo host path rc
