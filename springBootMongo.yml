@@ -23,12 +23,7 @@ spec:
         ports:
         - name: petclinic
           containerPort: 8080
-      - image: tomcat
-        name: tomcat
-        ports:
-        - name: tomcat
-          containerPot: 8080
-
+      
 ---
 # Node Port Service
 apiVersion: v1
