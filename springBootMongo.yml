@@ -14,15 +14,15 @@ spec:
       containers:
       - name: springboot
         image: kaushikarvind/spring-mongo-docker-k8s
-      #- image: dockerhandson/spring-boot-mongo
+        #- image: dockerhandson/spring-boot-mongo
         ports:
           - name: springboot
             containerPort: 8080
-#       - name: petclinic
-#         image: kaushikarvind/petclinic:8
-#         ports:
-#           - name: petclinic
-#             containerPort: 8081
+      - name: petclinic
+        image: kaushikarvind/petclinic:8
+        ports:
+          - name: petclinic
+            containerPort: 8080
 #       - name: tomcat
 #         image: tomcat
 #         ports:
