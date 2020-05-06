@@ -1,41 +1,41 @@
-# apiVersion: v1
-# kind: ReplicationController
-# metadata:
-#   labels:
-#     name: springboot
-#   name: spring-controller
-# spec:
-#   replicas: 1
-#   template:
-#     metadata:
-#       labels:
-#         name: springboot
-#     spec:
-#       containers:
-#       - name: springboot
-#         image: kaushikarvind/spring-mongo-docker-k8s
-#         #- image: dockerhandson/spring-boot-mongo
-#         ports:
-#           - name: springboot
-#             containerPort: 8080
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: springboot
+  name: spring-controller
+spec:
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        name: springboot
+    spec:
+      containers:
+      - name: springboot
+        image: kaushikarvind/spring-mongo-docker-k8s
+        #- image: dockerhandson/spring-boot-mongo
+        ports:
+          - name: springboot
+            containerPort: 8080
       
-# ---
-# # Node Port Service
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   labels:
-#     name: springboot
-#   name: springboot
-# spec:
-#   type: NodePort
-#   ports:
-#     - port: 8080
-#       targetPort: 8080
-#   selector:
-#     name: springboot
+---
+# Node Port Service
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: springboot
+  name: springboot
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    name: springboot
 
-#---
+---
 # PetClinic replication controller
 apiVersion: v1
 kind: ReplicationController
