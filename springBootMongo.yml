@@ -5,7 +5,7 @@ metadata:
     name: springboot
   name: spring-controller
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -27,7 +27,7 @@ spec:
         name: tomcat
         ports:
         - name: tomcat
-          containerPort: 8080
+          containerPot: 8080
 
 ---
 # Node Port Service
