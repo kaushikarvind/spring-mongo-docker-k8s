@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
       - name: petclinic
-        image: kaushikarvind/petclinic
+        image: kaushikarvind/petclinic:8
         #- image: dockerhandson/spring-boot-mongo
         ports:
         - name: petclinic
