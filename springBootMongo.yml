@@ -18,6 +18,11 @@ spec:
         ports:
         - name: springboot
           containerPort: 8080
+      - image: kaushikarvind/petclinic
+        name: petclinic
+        ports:
+        - name: petclinic
+          containerPort: 8080
 
 ---
 # Node Port Service
