@@ -22,7 +22,7 @@ spec:
         image: kaushikarvind/petclinic:8
         ports:
           - name: petclinic
-            containerPort: 8081
+            containerPort: 8080
       
 ---
 # Node Port Service
