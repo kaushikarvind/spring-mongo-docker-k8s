@@ -5,7 +5,7 @@ metadata:
     name: springboot
   name: spring-controller
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -41,45 +41,6 @@ spec:
     name: springboot
 
 ---
-# # PetClinic replication controller
-# apiVersion: v1
-# kind: ReplicationController
-# metadata:
-#   labels:
-#     name: petclinic
-#   name: petclinic
-# spec:
-#   replicas: 1
-#   template:
-#     metadata:
-#       labels:
-#         name: petclinic
-#     spec:
-#       containers:
-#       - name: petclinic
-#         image: kaushikarvind/petclinic:8
-#         #- image: dockerhandson/spring-boot-mongo
-#         ports:
-#         - name: petclinic
-#           containerPort: 8080
-      
-# ---
-# # PetClinic Node Port Service
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   labels:
-#     name: petclinic
-#   name: petclinic
-# spec:
-#   type: NodePort
-#   ports:
-#     - port: 8080
-#       targetPort: 8080
-#   selector:
-#     name: petclinic
-
-# ---
 # Mongo host path rc
 apiVersion: v1
 kind: ReplicationController
