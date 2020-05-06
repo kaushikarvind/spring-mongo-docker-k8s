@@ -42,7 +42,7 @@ kind: ReplicationController
 metadata:
   labels:
     name: petclinic
-  name: petclinic
+  name: petclinic-controller
 spec:
   replicas: 1
   template:
@@ -51,7 +51,7 @@ spec:
         name: petclinic
     spec:
       containers:
-      - image: kaushikarvind/petclinic
+      - image: kaushikarvind/petclinic:8
         name: petclinic
         ports:
         - name: petclinic
@@ -68,7 +68,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - port: 8000
+    - port: 8080
       targetPort: 8080
   selector:
     name: petclinic
