@@ -55,8 +55,8 @@ spec:
         image: kaushikarvind/petclinic
         #- image: dockerhandson/spring-boot-mongo
         ports:
-          - name: petclinic
-            containerPort: 8080
+        - name: petclinic
+          containerPort: 8080
       
 ---
 # PetClinic Node Port Service
@@ -102,7 +102,7 @@ spec:
       volumes:
       - name: mongo-persistent-storage
         hostPath:
-         path: /tmp/dbbackup
+          path: /tmp/dbbackup
 ---
 # Mongo Node Port RC
 apiVersion: v1
