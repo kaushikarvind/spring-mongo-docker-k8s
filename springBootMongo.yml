@@ -23,11 +23,11 @@ spec:
         ports:
         - name: petclinic
           containerPort: 8080
-      - image: kaushikarvind/jenkins-docker
-        name: jenkins
+      - image: tomcat
+        name: tomcat
         ports:
-        - name: jenkins
-          containerPort: 8080   
+        - name: tomcat
+          containerPort: 8080
 
 ---
 # Node Port Service
@@ -37,10 +37,10 @@ metadata:
   labels:
     name: springboot
     name: petclinic
-    name: jenkins
+    name: tomcat
   name: springboot
   name: petclinic
-  name: jenkins
+  name: tomcat
 spec:
   type: NodePort
   ports:
