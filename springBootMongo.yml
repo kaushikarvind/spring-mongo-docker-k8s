@@ -17,17 +17,17 @@ spec:
       #- image: dockerhandson/spring-boot-mongo
         ports:
           - name: springboot
-          containerPort: 8080
+            containerPort: 8080
       - name: petclinic
         image: kaushikarvind/petclinic:8
         ports:
           - name: petclinic
-          containerPort: 8080
+            containerPort: 8080
       - name: tomcat
         image: tomcat
         ports:
           - name: tomcat
-          containerPort: 8080
+            containerPort: 8080
       
 ---
 # Node Port Service
