@@ -23,6 +23,11 @@ spec:
         ports:
         - name: petclinic
           containerPort: 8080
+      - image: kaushikarvind/jenkins-docker
+        name: jenkins
+        ports:
+        - name: jenkins
+          containerPort: 8080   
 
 ---
 # Node Port Service
