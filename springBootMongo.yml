@@ -22,12 +22,12 @@ spec:
         image: kaushikarvind/petclinic:8
         ports:
           - name: petclinic
-            containerPort: 8080
+            containerPort: 8081
       - name: tomcat
         image: tomcat
         ports:
           - name: tomcat
-            containerPort: 8080
+            containerPort: 8082
       
 ---
 # Node Port Service
