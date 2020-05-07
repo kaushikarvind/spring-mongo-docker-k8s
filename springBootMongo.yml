@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: kaushikarvind/spring-mongo-docker-k8s
+        image: kaushikarvind/petclinic:8
+        # image: kaushikarvind/spring-mongo-docker-k8s
         #- image: dockerhandson/spring-boot-mongo
         ports:
           - name: springboot
