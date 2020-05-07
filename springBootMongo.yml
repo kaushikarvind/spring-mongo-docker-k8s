@@ -19,6 +19,11 @@ spec:
         ports:
           - name: springboot
             containerPort: 8080
+      - name: petclinic
+        image: kaushikarvind/petclinic:8
+        ports:
+          - name: petclinic
+            containerPort: 8080
       
 ---
 # Springboot Node Port Service
@@ -35,44 +40,6 @@ spec:
       targetPort: 8080
   selector:
     name: springboot
-
----
-# Petclinic Replication Controller
-apiVersion: v1
-kind: ReplicationController
-metadata:
-  labels:
-    name: petclinic
-  name: petclinic-controller
-spec:
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        name: petclinic
-    spec:
-      containers:
-      - name: petclinic
-        image: kaushikarvind/petclinic:8
-        ports:
-          - name: petclinic
-            containerPort: 8080
-      
----
-# Pet Clinic Node Port Service
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    name: petclinic
-  name: petclinic
-spec:
-  type: NodePort
-  ports:
-    - port: 8080
-      targetPort: 8080
-  selector:
-    name: petclinic
 
 ---
 # Mongo host path rc
