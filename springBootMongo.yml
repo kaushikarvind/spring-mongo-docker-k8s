@@ -36,7 +36,7 @@ spec:
     name: springboot
 
 ---
-# PetClinic RC
+# PetClinic RC 
 apiVersion: v1
 kind: ReplicationController
 metadata:
