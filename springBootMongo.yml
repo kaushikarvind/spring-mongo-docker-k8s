@@ -119,18 +119,18 @@ spec:
   selector:
     name: mongo
     
----
-# Grafana Node Port Service
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    name: grafana-ext
-  name: grafana-ext
-spec:
-  type: NodePort
-  ports:
-    - port: 8080
-      targetPort: 8080
-  selector:
-    name: grafana-ext
+# ---
+# # Grafana Node Port Service
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   labels:
+#     name: grafana-ext
+#   name: grafana-ext
+# spec:
+#   type: NodePort
+#   ports:
+#     - port: 8080
+#       targetPort: 8080
+#   selector:
+#     name: grafana-ext
